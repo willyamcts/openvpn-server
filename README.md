@@ -10,8 +10,6 @@ apt install -y git logrotate
 
 git clone <this repository>
 cp openvpn-server/openvpn.rotate /etc/logrotate.d/
-
-mkdir -p /var/log/openvpn/rotate
 ```
 
 # Suggestions for improvements 
