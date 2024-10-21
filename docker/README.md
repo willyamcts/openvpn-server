@@ -1,7 +1,7 @@
 # Running docker
 
 ```
-mkdir /var/log/openvpn
+mkdir -p /var/log/openvpn/rotate
 #chown openvpn: /var/log/openvpn
 ```
 
