@@ -6,7 +6,7 @@ The requirements are incorporated into scripts, but to follow the guidelines exa
 
 ```
 apt update
-apt install -y logrotate
+apt install -y git logrotate
 
 git clone <this repository>
 cp openvpn-server/openvpn.rotate /etc/logrotate.d/
