@@ -1,5 +1,3 @@
-#!/bin/bash
-
 apt update
 apt install ca-certificates curl
 install -m 0755 -d /etc/apt/keyrings
