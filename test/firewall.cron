@@ -1,0 +1,4 @@
+# startup rule iptables auto - the correct is add one script in /etc/init.d
+cat >> /etc/crontab << EOF''
+* * * * *	root    test -f /tmp/fw.ini || { iptables -A FORWARD -i $(ip route get 1.1.1.1 | awk -F' ' '{print $5}') -o tun0 -j ACCEPT && iptables -A FORWARD -i tun0 -o $(ip route get 1.1.1.1 | awk -F' ' '{print $5}') && touch /tmp/fw.ini; }
+EOF
