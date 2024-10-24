@@ -12,5 +12,8 @@ git clone <this repository>
 cp openvpn-server/openvpn.rotate /etc/logrotate.d/
 ```
 
+Go to next steps in [docker](docker) directory
+
+
 # Suggestions for improvements 
 Suggestions are welcome, use language PT-BR or EN, open the issue please and select correct tag (improvement, bug, ...)
