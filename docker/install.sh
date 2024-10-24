@@ -73,8 +73,6 @@ apt install -y easy-rsa
 chmod 640 ${SERVER_DIR}/cert/*.key
 #...
 
-echo 'net.ipv4.ip_forward = 1' > /etc/sysctl.d/00-custom.conf
-
 # running
 #/usr/local/openvpn/sbin/openvpn --cd $SERVER_DIR --config server.conf
 
