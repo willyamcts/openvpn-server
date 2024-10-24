@@ -21,12 +21,18 @@ docker build . --tag openvpn-custom:v0.1
 
 ```
 # 5. run container
-docker run --cap-add=NET_ADMIN --device /dev/net/tun --net host \
+docker run -d --cap-add=NET_ADMIN --device /dev/net/tun --net host \
  --name openvpn-server \
  -v /var/log/openvpn:/var/log/openvpn \
  -v ./cert:/usr/local/openvpn/server/cert \
  openvpn-custom:v0.1
 ```
+
+```
+# view logs if needed
+docker logs -f openvpn-server
+```
+
 
 ## Attention
 Your certs CA, CRT and KEY should in path `<...>/openvpn-server/docker/cert` in your host, otherwise change the path `./cert` in step 5
