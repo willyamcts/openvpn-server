@@ -1,4 +1,4 @@
-# openvpn-server
+# OpenVPN Server
 OpenVPN server implementation basic and configuration specific by client
 
 # Setup
