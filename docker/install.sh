@@ -30,6 +30,7 @@ mkdir -p $SERVER_DIR $CERT_DIR /var/log/openvpn/rotate
 ./configure --prefix=$CONFIG_DIR --sysconfdir=$SERVER_DIR
 make -j$(nproc)
 make install #DESTDIR=/usr/src/openvpn
+rm -rf /usr/src/openvpn-${OPENVPN_VERSION}
 
 
 echo '
