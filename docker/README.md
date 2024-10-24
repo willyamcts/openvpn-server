@@ -8,17 +8,14 @@ mkdir -p /var/log/openvpn/rotate
 # 2. allow forward between interfaces
 echo 'net.ipv4.ip_forward = 1' > /etc/sysctl.d/00-custom.conf
 
-# 3. setup firewall rule
-## check your interface from access or LAN
-my_iface=$(ip route get 1.1.1.1 | awk -F' ' '{print $5}') # or manually "ip -br a sh"
-
-# set forward rule between interfaces
-iptables -A FORWARD -i ${my_iface} -o tun+ -j ACCEPT
-iptables -A FORWARD -i tun+ -o ${my_iface} -j ACCEPT
+# 3. setup firewall rule - set forward rule between interfaces (do you have should other fw for control traffic I/O, don't worry this rule)
+iptables -A FORWARD -o tun+ -j ACCEPT
+iptables -A FORWARD -i tun+ -j ACCEPT
 ```
 
 ```
 # 4. generate image
+cd openvpn-server/docker
 docker build . --tag openvpn-custom:v0.1
 ```
 
