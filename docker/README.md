@@ -29,5 +29,5 @@ iptables -A FORWARD -i ${my_iface} -o tun0 -j ACCEPT
 iptables -A FORWARD -i tun0 -o ${my_iface} -j ACCEPT
 ```
 
-## Atention
+## Attention
 Your certs CA, CRT and KEY should in path `/etc/cert` from hosting, otherwise change the path in step 3
