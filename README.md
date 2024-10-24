@@ -13,7 +13,4 @@ cp openvpn-server/openvpn.rotate /etc/logrotate.d/
 ```
 
 # Suggestions for improvements 
-Suggestions are welcome, open the issue please and select correct tag (improvement, bug, ...)
-
-# Environment
-Tested in Debian only 
+Suggestions are welcome, use language PT-BR or EN, open the issue please and select correct tag (improvement, bug, ...)
